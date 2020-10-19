@@ -1,0 +1,215 @@
+
+:host {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-height: calc(100vh - 67px);
+}
+
+.container-left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    background-color: #589040;
+    position: relative;
+}
+
+.container-icon-button-back {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color : rgba(255,255,255,0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .material-icons {
+    font-size: 35px;
+    color: #1d1d1d;
+    }
+}
+
+.container-info-oils {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-info-oils-title {
+    margin-bottom: 25px;
+    .title {
+        height: 72px;
+        width: 373px;
+        color: #FFFFFF;
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 43px;
+    }
+ }
+
+.container-info-oils-first-text, .container-info-oils-second-text {
+    margin-bottom: 10px;
+    .text {
+        height: 192px;
+        width: 333px;
+        color: #FFFFFF;
+        font-size: 19px;
+        letter-spacing: 0;
+        line-height: 24px;
+        text-align: justify;
+    }
+}
+.logo {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+    img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
+
+.container-right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #FFFFFF;  
+}
+
+.container-list-oils {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display:none;
+}
+
+.title-and-body-png {
+    flex: 1;
+    width: 100%;
+    padding: 10%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.subtitle {
+    color: #5E5E5E;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 29px;
+}
+
+.body-png {
+    flex: 1;
+    margin-top: 3%;
+    position: relative;
+    background-color: grey;
+}
+
+.head-thorax {
+    position: absolute;
+    top: 0;
+    left: 36% - 12%;
+    width: 24%;
+    height: 35%;
+    background-color: green;
+    opacity: 0.5;
+}
+
+.head-thorax-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52%;
+    height: 15%;
+    background-color: green;
+    opacity: 0.5;
+}
+
+.arms-hands-left {
+    width: 24%;
+    height: 42%;
+    position: absolute;
+    top: 16%;
+    left: 0%;
+    background-color: red;
+    opacity: 0.5;    
+}
+.arms-hands-right {
+    width: 24%;
+    height: 42%;
+    position: absolute;
+    top: 16%;
+    left: 36% + 12%;
+    background-color:red;
+    opacity: 0.5;    
+}
+
+.arms-hands-title {
+    width: 52%;
+    height: 15%;
+    position: absolute;
+    top: 24%;
+    right: 0;
+    background-color: red;
+    opacity: 0.5;  
+}
+
+.abdomen-back {
+    position: absolute;
+    top: 50% - 15%;
+    width: 24%;
+    height: 16.5%;
+    left: 36% - 12%;
+    background-color: pink;
+    opacity: 0.5;
+}
+
+.abdomen-back-title {
+    position: absolute;
+    width: 52%;
+    height: 15%;
+    bottom: 27%;
+    right: 0;
+    background-color: pink;
+    opacity: 0.5;  
+}
+
+.legs-foots {
+    position: absolute;
+    bottom: 0%;
+    width: 24%;
+    height: 48.5%;
+    left: 36% - 12%;
+    background-color: blue;
+    opacity: 0.5;
+}
+
+.legs-foots-title {
+    position: absolute;
+    width: 52%;
+    height: 15%;
+    bottom: 12%;
+    right: 0;
+    background-color: blue;
+    opacity: 0.5;  
+}

@@ -1,0 +1,42 @@
+<div class="container">
+
+    <div class="container-left-column">
+        <div class="container-icon-button-back"  (click)="backToHome()">
+            <span class="material-icons">keyboard_backspace</span>
+        </div>
+        <div class="container-info-oils">
+            <div class="container-info-oils-title">
+                <span class="title">Dites-nous quels sont vos maux ou désagréments du quotidien</span>
+            </div>
+            <div class="container-info-oils-first-text">
+                <span class="text">Naturelles oui... mais très puissantes aussi ! Les huiles essentielles ne doivent pas s'utiliser n'importe comment. Accompagnés de professionnels de l'aromathérapie, nous faisons un rappel sur les grands principes et nous vous proposons des recettes pour traiter vos maux.</span>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="../../../../assets/749.jpg" alt="logo">
+        </div>
+    </div>
+    
+    <div class="container-right-column">
+        <div class="title-and-body-png">
+            <div class="title-body">
+                <span class="subtitle">Soulager les petits désagréments du quotidien au niveau de : </span>
+            </div>
+            <div class="body-png">
+                <img src="../../../assets/body-png/corps_abdomen.png" width="100%">
+                <div class="head-thorax" (click)="goToSelectedMaux('head')"></div>
+                <div class="head-thorax-title" (click)="goToSelectedMaux('head')"></div>
+                <div class="arms-hands-left" (click)="goToSelectedMaux('arms')"></div>
+                <div class="arms-hands-right" (click)="goToSelectedMaux('arms')"></div>
+                <div class="arms-hands-title" (click)="goToSelectedMaux('arms')"></div>
+                <div class="abdomen-back" (click)="goToSelectedMaux('abdomen')"></div>
+                <div class="abdomen-back-title" (click)="goToSelectedMaux('abdomen')"></div>
+                <div class="legs-foots" (click)="goToSelectedMaux('legs')"></div>
+                <div class="legs-foots-title" (click)="goToSelectedMaux('legs')"></div>
+            </div>
+
+        </div>
+    </div>
+
+    
+</div>

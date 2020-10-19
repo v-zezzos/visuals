@@ -1,0 +1,54 @@
+<app-carousel *ngIf="items" class="carousel" #carousel [transition]="{duration: '2s'}" [items]="items" [itemTpl]="itemTpl" [autoPlay]="true" [autoPlayDuration]="2000" [loop]="true" [first]='0'></app-carousel>
+
+<ng-template let-item="item" let-index="idx" #itemTpl>
+  <div class="carousel-item" [ngStyle]="{ 'background-image': 'url(' + ( item | quableImg) + ')'}">
+      <span style="color: green; font-weight: 900; font-size: 36px;">{{ index }}</span>
+  </div>
+</ng-template>
+<!--div class="wrap_carousel">
+    <ng-simple-carousel-with-dots [images]="images" [controller]="controllerDots" (imgChange)="onImgChange($event)">
+    </ng-simple-carousel-with-dots>
+</div> 
+<ngu-carousel #myCarousel [inputs]="carouselTile" [dataSource]="carouselTileItems">
+    <ngu-tile *nguCarouselDef="let item; let i = index">
+   
+      <ngu-carousel #myCarousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad(i)" [dataSource]="carouselTiles[i]">
+        <ngu-tile *nguCarouselDef="let item; let j = index">
+          <div class="tile" [style.background]="'url(' + item + ')'" style="min-height: 200px">
+            <h1>{{j}}</h1>
+          </div>
+        </ngu-tile>
+        <button NguCarouselPrev class="leftRs" [style.opacity]="myCarousel.isFirst ? 0.5:1">&lt;</button>
+        <button NguCarouselNext class="rightRs" [style.opacity]="myCarousel.isLast ? 0.5:1">&gt;</button>
+        <ul class="myPoint" NguCarouselPoint>
+          <li *ngFor="let j of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint" (click)="myCarousel.moveTo(j)"
+            [style.background]="'url(' + carouselTileItems[j] + ')'"></li>
+        </ul>
+      </ngu-carousel>
+   
+    </ngu-tile>
+    <button NguCarouselPrev class="leftRs" [style.opacity]="myCarousel.isFirst ? 0.5:1">&lt;</button>
+    <button NguCarouselNext class="rightRs" [style.opacity]="myCarousel.isLast ? 0.5:1">&gt;</button>
+    <ul class="myPoint" NguCarouselPoint>
+      <li *ngFor="let i of myCarousel.pointNumbers; let i = index" [class.active]="i==myCarousel.activePoint" (click)="myCarousel.moveTo(i)"
+        [style.background]="'url(' + carouselTileItems[i] + ')'"></li>
+    </ul>
+  </ngu-carousel>
+<div class="container" #carouselEl>
+    <ngu-carousel [inputs]="carouselBanner" (onMove)="onmoveFn($event)">
+        <ngu-item NguCarouselItem class="bannerStyle">
+          <h1>1</h1>
+        </ngu-item>
+   
+        <ngu-item NguCarouselItem class="bannerStyle">
+          <h1>2</h1>
+        </ngu-item>
+   
+        <ngu-item NguCarouselItem class="bannerStyle">
+          <h1>3</h1>
+        </ngu-item>
+   
+        <button NguCarouselPrev class="leftRs">&lt;</button>
+        <button NguCarouselNext class="rightRs">&gt;</button>
+      </ngu-carousel>
+</div-->

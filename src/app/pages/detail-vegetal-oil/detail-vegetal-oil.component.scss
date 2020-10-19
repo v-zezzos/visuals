@@ -1,0 +1,291 @@
+
+:host {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 17px;
+    line-height: normal;
+}
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-height: calc(100vh - 67px);
+}
+
+.container-left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+}
+
+.container-icon-button-back {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color : rgba(255,255,255,0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .material-icons {
+    font-size: 35px;
+    color: #1d1d1d;
+    }
+}
+
+.container-info-oils {
+    flex: 1;
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-info-oils-title {
+    margin-bottom: 25px;
+    .title {
+        height: 72px;
+        width: 373px;
+        color: #FFFFFF;
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 43px;
+    }
+ }
+
+.container-info-oils-first-text, .container-info-oils-second-text {
+    margin-bottom: 10px;
+    .text {
+        height: 192px;
+        width: 333px;
+        color: #FFFFFF;
+        font-size: 19px;
+        letter-spacing: 0;
+        line-height: 24px;
+        text-align: justify;
+    }
+}
+.logo {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+    img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
+
+.container-right-column {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    overflow: scroll;
+    z-index: 10;
+}
+
+.container-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding-left: 22%;
+}
+
+.container-informations {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display:none;
+}
+
+.container-summary {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 18px;
+    padding-right: 21px;
+    padding-bottom: 30vh;
+    padding-top: 25vh;
+}
+
+.container-summary > * {
+    flex: 1;
+}
+.summary-title {
+    color: #A7A18C;
+    font-size: 15px;
+}
+.img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 20px;
+    z-index: 0;
+    .img-oil-link {
+        width: 30vw;
+        height: 30vw;
+        border-radius: 50%;
+        z-index: 5;
+    }
+    .img-flacon {
+        position: absolute;
+        .flacon-img {
+            max-height: 200px;
+            z-index: 20;
+        }
+    }
+}
+.name-oil {
+    flex: 1;
+    font-size: 48px;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+.subtitle-oil {
+    flex: 1;
+    font-size: 18px;
+    opacity: 0.65;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 22px;
+}
+
+.description-oil {
+    padding-bottom: 65px;
+}
+
+.title {
+    font-size: 26px;
+}
+.text {
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.maux-buttons {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 10px;
+}
+.maux-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    min-height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 25px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.maux-button + .maux-button {
+    margin-left: 5px;
+}
+
+.usage-tips-container {
+    margin-bottom: 10px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+.usage-tips-method {
+  color: #1D1D1D;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+.use-methode {
+    padding: 20px;
+}
+
+.precaution-pregnant-age {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.pregnant-age {
+    position: relative;
+    span {
+        font-size: 20px;
+    }
+}
+.age {
+    padding-left: 20px;
+}
+/* class utilitaires */
+.flex-row-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.flex-row-end-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.margin-top {
+    margin-top: 30px;
+}
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #5f5f5f;
+    opacity: 0.5;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.small {
+    display: block;
+    margin-left: 15px;
+    min-width: 25px;
+    max-width: 25px;
+}
+.float-left {
+    float: left;
+}
+.oblique {
+    height: 2px;
+    width: 50px;
+    margin-bottom: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg);
+    border-radius: 0.5px;
+    background-color: #CF5047;
+}
+.bold {
+    height: 2px;
+}
+.font-weight {
+    font-weight: bold;
+}

@@ -1,0 +1,31 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 1200px;
+}
+.oil-item {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    img, .no-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    .name-oil {
+        padding-left: 34px;
+        height: 21px;
+        color: #000000;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 23px;
+    }
+}

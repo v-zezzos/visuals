@@ -1,0 +1,9 @@
+<app-line></app-line>
+<ng-container *ngFor="let oil of listOil">
+    <div class="oil-item" #oilEl (click)="goToDetailOil(oil)">
+        <img *ngIf="oil.img" src="{{ oil.img | quableImg }}" />
+        <div *ngIf="!oil.img" class="no-img"></div>
+        <span class="name-oil"> {{ oil?.name | titlecase }}</span>
+    </div>
+    <app-line></app-line>
+</ng-container>

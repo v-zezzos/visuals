@@ -1,0 +1,104 @@
+
+<div class="container">
+
+    <div class="home-one">
+
+        <div class="home-head">
+            <div class="container-oils">
+                <div class="container-essentials-oils" (click)="goToEssentialsOils()">
+                    <div class="container-title-essentials-oils">
+                        <span class="title">Huiles essentielles, quelles sont leurs propriétés ?</span>
+                    </div>
+                    <div class="container-text-essentials-oils">
+                        <span class="text">Venez découvrir quels sont les usages, leurs propriétés ou encore leurs posologies.</span>
+                    </div>
+                    <div class="container-icon-essentials-oils">
+                        <span class="material-icons">keyboard_arrow_right</span>
+                    </div>
+                </div>
+                <div class="container-vegetals-oils">
+                    <div class="container-title-vegetals-oils">
+                        <span class="title">Huiles végétales</span>
+                    </div>
+                    <div class="container-info-button-vegetals-oils" (click)="goToVegetalsOils()">
+                        <span class="info-button">En savoir plus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-bottom">
+            <div class="aroma-info">
+                <div class="content">
+                    <div class="container-title">
+                        <span class="title">L’aromathérapie, Qu’est ce que c’est ?</span>
+                    </div>
+                    <div class="container-icon">
+                    <span class="material-icons">keyboard_arrow_right</span>
+                    </div>
+                </div>   
+            </div>
+            <div class="logo"></div>
+        </div>
+    </div>
+
+
+    <div class="home-two">
+
+        <div class="home-head" #carouselEl >
+            <app-carousel *ngIf="news" class="carousel" #carousel [items]="news" [itemTpl]="itemTpl" [autoPlay]="false" [autoPlayDuration]="2000" [loop]="true" [first]='0'></app-carousel>
+
+            <ng-template let-newEl="item" let-index="idx" #itemTpl>
+                <div class="carousel-item" [ngStyle]="{ 'background-image': 'url(' + ( newEl.img | quableImg) + ')'}">
+                    <div class="inner-home-head carousel-cell" (click)="goToNews(newEl.id)" >
+                        <div class="ghost"></div>
+                        <div class="content">
+                            <div class="container-title">
+                                <span class="title">{{newEl.newsName}}</span>
+                            </div>
+                            <div class="container-icon">
+                                <span class="material-icons">keyboard_arrow_right</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+
+            <!--carousel *ngIf="viewReady" [width]="width" [height]="height" [cellWidth]="width" [arrows]="false" [autoplay]="false" [dots]="true" [pauseOnHover]="true">
+                <div class="inner-home-head carousel-cell" (click)="goToNews(newEl.id)" *ngFor="let newEl of news" [ngStyle]="{ 'background-image' : 'url(https://cdn.quable.com/sandbox_zento/'+ newEl.img +'/original/' + newEl.img + '.png)'}">
+                    <div class="ghost"></div>
+                    <div class="content">
+                        <div class="container-title">
+                            <span class="title">{{newEl.newsName}}</span>
+                        </div>
+                        <div class="container-icon">
+                        <span class="material-icons">keyboard_arrow_right</span>
+                        </div>
+                    </div>
+                </div>
+            </carousel-->       
+        </div>
+
+
+        <div class="home-bottom" (click)="goToMaux()">
+
+            <div class="container-info-recipes">
+                <div class="container-info-recipes-title">
+                    <span class="title">Comment combattre les petits désagréments du quotidien ?</span>
+                </div>
+                <div class="container-info-recipes-text">
+                    <span class="text">Migraine, fatigue, mal de gorge, problème digestif, douleur musculaire ? Nous avons sélectioné des recettes d’huiles essentielles pour combattre vos maux et améliorer votre bien être.</span>
+                </div>
+                <div class="container-info-recipes-icon">
+                    <span class="material-icons">keyboard_arrow_right</span>
+                </div>
+            </div>
+            <div class="container-logo-help">
+                <img src="../../../assets/info (1).svg" alt="logo de l'aide">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!--button (click)="navigate()" mat-raised-button color="primary">Home</button-->

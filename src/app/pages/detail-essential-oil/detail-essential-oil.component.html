@@ -1,0 +1,128 @@
+<div class="container" *ngIf="selectedOil">
+
+    <div class="container-left-column" [ngStyle]="{'background-color': selectedOil?.backgroundColor}">
+        <div class="container-icon-button-back" (click)="buttonBack()">
+            <span class="material-icons">keyboard_backspace</span>
+        </div>
+        <div class="img-container">
+            <img class="img-oil-link"  src= '{{ selectedOil?.img | quableImg }}'>
+            <!--div class="img-flacon">
+                <img class="flacon-img" src='{{ selectedOil.imgFlacon | quableImg }}'>
+            </div-->
+        </div>
+        <div class="logo" (click)="backToHome()">
+            <img src="../../../../assets/749.jpg" alt="logo">
+        </div>
+    </div>
+    
+    <div class="container-right-column">
+
+        <div class="container-details" #scrollEl (scroll)="divHasScrolled($event)">
+
+            <div class="name-oil-subtitle">
+                <div class="name-oil flex-row-start" >
+                    <p class="title-oil">{{ selectedOil?.name | uppercase}}</p>
+                </div>
+                <div class="subtitle-oil flex-row-start">
+                    <p class="subtitle" [ngStyle]="{'color': selectedOil?.backgroundColor}">{{ selectedOil?.bienfaits | uppercase }}</p>
+                </div>
+                <p class="line"></p>
+            </div>
+            <div class="container-informations margin-top">
+                <div class="description-oil" [innerHTML]="selectedOil?.description" #info></div>
+                <div class="latin-name-oil flex-row-start">
+                    <p class="text" >Nom Latin : </p>
+                    <p class="latin-name">{{ selectedOil?.latinName }}</p>
+                </div>
+                <div class="origin-oil  flex-row-start">
+                    <p class="text" >Provenance : </p>
+                    <p class="latin-name ">{{ selectedOil?.origin }}</p>
+                </div>
+                <div class="parts-used-oil  flex-row-start">
+                    <p class="text" >Partie utilisée : </p>
+                    <p class="latin-name ">{{ selectedOil?.partsUsed }}</p>
+                </div>
+                <div class="main-components-oil">
+                    <span class="text float-left">Principaux composants : </span>
+                    <div [innerHTML]="selectedOil?.mainComponents" ></div>
+                </div>
+            </div>
+
+            <div class="container-properties margin-top">
+                <div class="properties-title" #properties>
+                    <span class="title">Propriétés</span>
+                    <p class="line"></p>
+                    <!--app-line></app-line-->
+                </div>
+                <div class="maux-buttons" *ngIf="mauxForThisOil">
+                    <p
+                        class="maux-button"
+                        *ngFor="let mal of mauxForThisOil"
+                        [ngStyle]="{'background-color': selectedOil?.backgroundColor}"
+                        > 
+                        {{ mal?.name }}
+                    </p>
+                </div>
+                <div class="properties-oil" [innerHTML]="selectedOil?.properties"></div>
+            </div>
+
+            <div class="container-usage-tips margin-top">
+                <div class="usage-tips-title" #uses>
+                    <span class="title">Conseils d'utilisation</span>
+                    <p class="line"></p>
+                </div>
+
+                <ng-container *ngIf="compatibilitiesOfUses">
+                    <div class="usage-tips-container" *ngFor="let use of compatibilitiesOfUses" [ngStyle]="{'background-color': selectedOil?.backgroundColor | hexaToRgba : '0.25'}">
+                        <div class="usage-tips-method">
+                            <span>{{use?.key | titlecase}}</span>
+                        </div>
+                        <p class="line" style="background-color: #ffffff; height: 2px;"></p>
+                        <div class="use-methode" [innerHTML]="use?.value"></div>
+                    </div>
+                </ng-container>
+                
+                <div class="usage-tips-oil" [innerHTML]="selectedOil?.usageTips"></div>
+            </div>
+
+            <div class="container-precaution margin-top">
+                <div class="precaution-title" #precaution>
+                    <span class="title">Précautions d'utilisation</span>
+                    <p class="line"></p>
+                </div>
+                <div class="precaution-pregnant-age">
+                    <div class="pregnant-age" *ngIf="!selectedOil?.pregnant">
+                        <img src="../../../assets/pregnant_woman_black_54x54.png" width="50" height="50" viewBox="0 0 50 50">
+                        <p class="oblique"></p>
+                    </div>
+                    <div class="pregnant-age age" *ngIf="selectedOil?.ageLimit">
+                        <span width="50" height="50" viewBox="0 0 50 50">{{ selectedOil?.ageLimit}}</span>
+                        <p class="oblique"></p>
+                    </div>
+                </div>
+                
+                <!--div class="margin-top"style="border-radius: 25% 10%;background-color: pink;height: 1px;width: 24px;transform: rotate(45deg);">
+                </div-->
+                <div class="precaution-oil" [innerHTML]="selectedOil?.precaution"></div>
+            </div>
+
+            <div class="container-did-you-know margin-top">
+                <div class="did-you-know-title" #didYouKnow>
+                    <span class="title">Le saviez-vous ?</span>
+                    <p class="line"></p>
+                </div>
+                <div class="did-you-know-oil" [innerHTML]="selectedOil?.didYouKnow"></div>
+            </div>
+            
+        </div>
+        <div class="container-summary">
+            <div class="flex-row-end-center summary" (click)="clickOnSummary(summaryEl.id)" *ngFor="let summaryEl of summary">
+                <span class="summary-title" [ngClass]="{ 'font-weight': summaryEl.id === selectedSummary}" #info>{{ summaryEl.label }}</span>
+                <p *ngIf="summaryEl.id === selectedSummary" class="line small bold"></p>
+            </div>
+            <!--app-summary [alphabet]="alphabet" [idSummary]="'vegetal'"></app-summary-->
+        </div>
+
+    </div>
+    
+</div>

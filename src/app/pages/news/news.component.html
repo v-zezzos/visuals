@@ -1,0 +1,41 @@
+
+<div class="container">
+    <div class="container-left">
+        
+    </div>
+    <div class="container-right">
+        <div class="container-logo">
+            <img src="../../../../assets/749.jpg" alt="logo">
+        </div>
+    </div>
+    <div class="container-center">
+        <div class="container-center-contents">
+
+            <app-carousel *ngIf="newsData" class="carousel" #carousel [pagination]="true" [navigation]="false" [items]="newsData" [itemTpl]="itemTpl" [autoPlay]="false" [autoPlayDuration]="2000" [loop]="true" [first]='0'></app-carousel>
+            <ng-template let-news="item" let-index="idx" #itemTpl>
+                <div class="carousel-item">
+                    <div class="container-all-text">
+                        <div class="container-title">
+                            <span class="title">{{news?.newsName}}</span>
+                        </div>
+                        <div class="container-subtitle">
+                            <span class="subtitle">{{news?.newsKeyWordSubTitle}}</span>
+                        </div>
+                        <div class="container-text" [innerHTML]="news?.newsDescription">
+                        </div>
+                        <div class="container-button-en-savoir-plus">
+                            <span class="button-en-savoir-plus">En savoir plus</span>
+                        </div>
+                    </div>
+                    <div class="container-img" [ngStyle]="{ 'background-image': 'url(' + ( news?.img | quableImg) + ')'}">
+                    </div>
+                </div>
+            </ng-template>
+
+        </div>
+        <div class="container-button-back-home" (click)="goToHome()">
+            <span class="material-icons">home</span>
+        </div>
+        
+    </div>
+</div>

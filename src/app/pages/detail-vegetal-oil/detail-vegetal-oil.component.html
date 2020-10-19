@@ -1,0 +1,85 @@
+<div class="container" *ngIf="selectedOil">
+
+    <div class="container-left-column" style="background-color: #D89A5F;"><!--[ngStyle]="{'background-color': selectedOil?.backgroundColor}"-->
+        <div class="container-icon-button-back" (click)="buttonBack()">
+            <span class="material-icons">keyboard_backspace</span>
+        </div>
+        <div class="img-container">
+            <img class="img-oil-link"  src= '{{ selectedOil?.img | quableImg }}'>
+            <!--div class="img-flacon">
+                <img class="flacon-img" src='{{ selectedOil.imgFlacon | quableImg }}'>
+            </div-->
+        </div>
+        <div class="logo" (click)="backToHome()">
+            <img src="../../../../assets/749.jpg" alt="logo">
+        </div>
+    </div>
+    
+    <div class="container-right-column">
+
+        <div class="container-details" #scrollEl (scroll)="divHasScrolled($event)">
+
+            <div class="name-oil-subtitle">
+                <div class="name-oil flex-row-start" >
+                    <p class="title-oil">{{ selectedOil?.name | uppercase}}</p>
+                </div>
+                <p class="line"></p>
+            </div>
+            <div class="container-informations margin-top">
+                <div class="description-oil"#info > <!--[innerHTML]="selectedOil?.description"-->
+                    <span>
+                        La cannelle provient du cannelier, un arbre de 6 à 12 m de haut à feuilles persistantes, souvent réduit à l’état d’arbuste par la taille. Son écorce, partie utilisée en aromatherapie, est récoltée sur les rejets de l'arbre.
+                    </span>
+                </div>
+            </div>
+
+            <div class="container-properties margin-top">
+                <div class="properties-title" #properties>
+                    <span class="title">Propriétés</span>
+                    <p class="line"></p>
+                    <!--app-line></app-line-->
+                </div>
+                <div class="properties-oil"> <!--[innerHTML]="selectedOil?.properties"-->
+                    <span>
+                        L’huile essentielle de Cannelle est un anti infectieux à large spectre efficace sur les virus, bactéries, parasites et champignons. Elle est très souvent utilisée dans les infections intestinales comme la gastro-entérite.
+                    </span>
+                </div>
+            </div>
+
+            <div class="container-precaution margin-top">
+                <div class="precaution-title" #precaution>
+                    <span class="title">Précautions d'utilisation</span>
+                    <p class="line"></p>
+                </div>
+                <div class="precaution-pregnant-age">
+                    <div class="pregnant-age" *ngIf="!selectedOil?.pregnant">
+                        <img src="../../../assets/pregnant_woman_black_54x54.png" width="50" height="50" viewBox="0 0 50 50">
+                        <p class="oblique"></p>
+                    </div>
+                    <div class="pregnant-age age" *ngIf="selectedOil?.ageLimit">
+                        <span width="50" height="50" viewBox="0 0 50 50">{{ selectedOil?.ageLimit}}</span>
+                        <p class="oblique"></p>
+                    </div>
+                </div>
+                
+                <!--div class="margin-top"style="border-radius: 25% 10%;background-color: pink;height: 1px;width: 24px;transform: rotate(45deg);">
+                </div-->
+                <div class="precaution-oil"> <!--[innerHTML]="selectedOil?.precaution"-->
+                    <span>
+                        Ne pas utiliser pure sur la peau (irritant).<br />
+                        Ne pas utiliser chez la femme enceinte et allaitante.<br />
+                        Ne pas utiliser chez l’enfant de moins de 12 ans.<br />
+                        Ne pas utiliser en cas de d’allergie au cinnamaldéhyde (rare).<br />
+                        En cas de gastrite, toujours prendre à la fin du repas.
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container-summary">
+            <!--app-summary [alphabet]="alphabet" [idSummary]="'vegetal'"></app-summary-->
+        </div>
+
+    </div>
+    
+</div>

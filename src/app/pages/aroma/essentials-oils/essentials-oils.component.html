@@ -1,0 +1,37 @@
+<div class="container">
+
+    <div class="container-left-column">
+        <div class="container-icon-button-back" (click)="backToHome()">
+            <span class="material-icons">keyboard_backspace</span>
+        </div>
+        <div class="container-info-oils">
+            <div class="container-info-oils-title">
+                <span class="title">Nous avons sélectionné pour vous plus de 50 huiles essentielles </span>
+            </div>
+            <div class="container-info-oils-first-text">
+                <span class="text">Il existe un grand nombre d'huiles essentielles, pour remédier à tous les petits maux du quotidien. Chaque huile possède de nombreuses propriétés et peut être utilisées de plusieurs façons. </span>
+            </div>
+            <div class="container-info-oils-second-text">
+                <span class="text">La ParaPharmacie E.Leclerc vous propose de découvrir leurs propriétés, parmi les produits que nous vous proposons dans ce rayon.</span>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="../../../../assets/749.jpg" alt="logo">
+        </div>
+    </div>
+    
+    <div class="container-right-column">
+
+        <div class="container-list-oils" #scrollEl (scroll)="divHasScrolled($event)">
+            <div class="list-oils-title">
+                <span class="title">Nos huiles essentielles :</span>
+            </div>
+            <app-oil-list [listOil]="listOils" [idSummary]="'essential'"></app-oil-list>
+        </div>
+        <div class="container-alphabet">
+            <app-summary [alphabet]="alphabet" [idSummary]="'essential'"></app-summary>
+        </div> 
+
+    </div>
+    
+</div>

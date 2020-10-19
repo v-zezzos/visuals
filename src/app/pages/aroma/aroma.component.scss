@@ -1,0 +1,373 @@
+
+.container {
+    width: 100%;
+    min-height: calc(100vh - 67px);
+    background-color: maroon;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    .home-one {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .home-head {
+            width: 100%;
+            flex: 2;
+            background-color: #204838;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .container-oils {
+                padding: 100px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .container-essentials-oils {
+                    width: 100%;
+                    flex: 3;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .container-title-essentials-oils {
+                        margin-bottom: 10px;
+                        .title {
+                            height: 100px;
+                            width: 333px;
+                            color: #FFFFFF;
+                            font-size: 2.26em;
+                            font-weight: bold;
+                            letter-spacing: 0;
+                            line-height: 43px;
+                            word-break: break-word;
+                            overflow: hidden;
+                        }
+                    }
+                    .container-text-essentials-oils {
+                        margin-bottom: 25px;
+                        .text {
+                            height: 48px;
+                            width: 333px;
+                            color: #FFFFFF;
+                            font-size: 1.1875em;
+                            letter-spacing: 0;
+                            line-height: 24px;
+                            text-align: justify;
+                            word-break: break-word;
+                        }
+                    }
+                    .container-icon-essentials-oils {
+                        .material-icons {
+                            color: #FFFFFF;
+                            background-color : rgba(29,29,29,0.1);
+                        }
+                    }
+                    
+                }
+                .container-vegetals-oils {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding-right: 150px;
+                    .container-title-vegetals-oils {
+                        flex: 1;
+                        .title {
+                            height: 28.8px;
+                            width: 245px;
+                            color: #FFFFFF;
+                            font-size: 24px;
+                            font-weight: bold;
+                            letter-spacing: 0;
+                            line-height: 29px;
+                            word-break: break-word;
+                        }
+                    }
+                    .container-info-button-vegetals-oils {
+                        min-width: 240px;
+                        min-height: 50px;
+                        max-width: 600px;
+                        box-sizing: border-box;
+                        flex: 1;
+                        border: 1px solid #FFFFFF;
+                        border-radius: 25px;
+                        background-color: #204838;
+                        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        .info-button {
+                            color: #FFFFFF;
+                            font-size: 18px;
+                            font-weight: bold;
+                            letter-spacing: 0;
+                            line-height: 23px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 1281px) {
+                .container-oils {
+                    padding: 40px;
+                }
+               //CSS
+               
+            }
+        }
+
+        .home-bottom {
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            
+            .aroma-info {
+                flex: 1;
+                background-color: #C3C6A7;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .content {
+                    flex: 1;
+                    .container-title {
+                        margin-bottom: 10px;
+                        .title {
+                            color: #1D1D1D;
+                        }
+                    }
+                    
+                    .material-icons {
+                        color: #1D1D1D;
+                        background-color : rgba(29,29,29,0.05);
+                    }
+                }
+            }
+
+            .logo {
+                flex: 1;
+                background-color: white;
+                background-image: url("../../../assets/749.jpg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .home-two {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+                
+        .home-head {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            //background-image: url("../../../assets/dont-starve.png");
+            .inner-home-head {
+                flex: 1;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: stretch;
+                // background-color : rgba(29,29,29,0.4);
+                cursor: pointer;
+                .ghost {
+                    flex: 2;
+                }
+    
+                .content {
+                    flex: 1;
+                    .container-title {
+                        margin-bottom: 10px;
+                        .title {
+                            color: #FFFFFF;
+                            text-shadow: 0 6px 0 rgba(0,0,0,0.5);
+                        }
+                    }
+                    
+                    .material-icons {
+                        color: #FFFFFF;
+                        background-color : rgba(29,29,29,0.4);
+
+                    }
+                }
+            }
+        }
+
+        .home-bottom {
+            flex: 2;
+            background-color: #589040;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            position: relative;
+            .container-info-recipes {
+                width: 100%;
+                flex: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 100px;
+                .container-info-recipes-title {
+                    margin-bottom: 10px;
+                    .title {
+                        height: 100px;
+                        width: 333px;
+                        color: #FFFFFF;
+                        font-size: 36px;
+                        font-weight: bold;
+                        letter-spacing: 0;
+                        line-height: 43px;
+                        word-break: break-word;
+                    }
+                }
+                .container-info-recipes-text {
+                    margin-bottom: 25px;
+                    .text {
+                        height: 96px;
+                        width: 333px;
+                        color: #FFFFFF;
+                        font-size: 19px;
+                        letter-spacing: 0;
+                        line-height: 24px;
+                        word-break: break-word;
+                    }
+                }
+                
+                .material-icons {
+                    color: #FFFFFF;
+                    background-color : rgba(29,29,29,0.1);
+                }
+            }
+            @media (max-width: 1281px) {
+                .container-info-recipes {
+                    padding: 40px;
+                }
+               //CSS
+               
+            }
+            .container-logo-help {
+                width: 80px;
+                height: 80px;
+                background-color: #FFFFFF;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 10px;
+                box-sizing: border-box;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .title {
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 29px;
+        word-break: break-word;
+    }
+    .material-icons {
+        font-size: 3.125em;
+    }
+    .content {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+    }
+
+}
+
+.carousel {
+    flex: 1;
+}
+
+.carousel-item {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+@media (min-width: 1281px) {
+  
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    //CSS
+    
+  }

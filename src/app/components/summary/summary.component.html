@@ -1,0 +1,6 @@
+
+<div [ngClass]="{ 'bold': letter.letter === selectedLetter }" class="letter-container" *ngFor="let letter of alphabet" (click)="selectLetter(letter)">
+    <span [ngClass]="{ 'inactive': !letter.active }">
+        {{ letter.letter | uppercase }}
+    </span>
+</div>

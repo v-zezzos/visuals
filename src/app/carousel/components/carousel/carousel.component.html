@@ -1,0 +1,48 @@
+<div class="pagination-outer-container">
+    
+    <div class="navigation-outer-container">
+        
+        <div *ngIf="navigation" class="navigation-container left-navigator" [ngClass]="{ 'navigation-container-inside': navigationInside, 'left-navigator-inside': navigationInside }">
+            <ng-container [ngTemplateOutlet]="leftNavigatorTpl || defaultLeftNavigatorTpl" [ngTemplateOutletContext]="getTemplateContext()"></ng-container>
+        </div>
+        
+        <div class="carousel-outer-container" #carouselOuterScene (pan)="track($event)">
+            <div class="carousel-container" #carouselScene>
+                <div *ngFor="let item of loopItems; let idx = index" class="carousel-item-container" #carouselItemRef>
+                    <ng-container [ngTemplateOutlet]="itemTpl" [ngTemplateOutletContext]="getTemplateContext({ item: item, index: loop ? computeLoopIdx(idx) : idx, idx: idx })"></ng-container>
+                </div>
+            </div>
+        </div>
+        
+        <div *ngIf="navigation" class="navigation-container right-navigator" [ngClass]="{ 'navigation-container-inside': navigationInside, 'right-navigator-inside': navigationInside }">
+            <ng-container [ngTemplateOutlet]="rightNavigatorTpl || defaultRightNavigatorTpl" [ngTemplateOutletContext]="getTemplateContext()"></ng-container>
+        </div>
+
+    </div>
+    
+    <div *ngIf="pagination" class="pagination-container" [ngClass]="{ 'pagination-container-inside': paginationInside }">
+        <ng-container [ngTemplateOutlet]="paginatorTpl || defaultPaginatorTpl" [ngTemplateOutletContext]="getTemplateContext()"></ng-container>
+    </div>
+
+</div>
+
+
+<ng-template #defaultPaginatorTpl let-ref="ref" let-items="items" let-activeIndex="activeIndex">
+    <div class="paginator-container">
+        <div class="paginator-item-container" *ngFor="let item of items; let idx = index">
+            <div class="paginator-item" [ngClass]="{ 'paginator-item-active': idx === activeIndex }" (click)="ref.goto(idx)"></div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #defaultLeftNavigatorTpl let-ref="ref" let-items="items">
+    <div class="navigation left-navigation" (click)="ref.previous()">
+        <button [disabled]="!ref.canPrevious" mat-icon-button><mat-icon>keyboard_arrow_left</mat-icon></button>
+    </div>
+</ng-template>
+
+<ng-template #defaultRightNavigatorTpl let-ref="ref" let-items="items">
+    <div class="navigation right-navigation" (click)="ref.next()">
+        <button [disabled]="!ref.canNext" mat-icon-button><mat-icon>keyboard_arrow_right</mat-icon></button>
+    </div>
+</ng-template>
